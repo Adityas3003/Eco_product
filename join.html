@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /*header */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color:#f5f5f5;
+}
+
+/* Header Styles */
+header {
+  background-color: #f8f9fa; 
+  padding: 10px 20px; 
+  border-bottom: 1px solid #ddd; 
+}
+
+/* Main Container Styles */
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  height: 50px;
+  
+}
+
+/* Shop Name Styles */
+#shopName {
+  font-size: 30px;
+}
+
+#shopName a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding-left: 15px;
+}
+#collection {
+  display: flex;
+  gap: 20px; 
+}
+
+#collection div {
+  font-size: 18px;
+}
+
+#collection a {
+  text-decoration: none;
+  color: black; 
+  justify-content: center;
+  font-size: 24px;
+  padding: 0 18px;
+
+
+}
+
+#collection a:hover {
+  text-decoration: underline;
+}
+
+/* User Section Styles */
+#user {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  position: relative;
+  padding-right: 10px; 
+}
+
+/* User Icon and Cart Icon Styles */
+#user a {
+  color: #333;
+  text-decoration: none;
+}
+
+#user i {
+  font-size: 24px; 
+  color: #333; 
+  position: relative; 
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            background-color:#f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #f79308;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #20b920;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section>
+            <!-- MAIN CONTAINER -->
+            <div id="container">
+                <!-- SHOP NAME -->
+                <div id="shopName"><a href="main.html"> <b>Eco</b>Product </a></div>
+                    
+                    <!-- USER SECTION (CART AND USER ICON) -->
+                    <div id="user">
+                        <a href="main.html"> <i class="fa fa-home"></i></a>
+                        <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"></i></a>
+                        <a href="reg.html"> <i class="fas fa-user-circle userIcon"></i> </a>
+                    </div>
+            </div>
+
+        </section>
+    </header>
+
+<div class="container">
+    <h1>Join Our Workshop</h1>
+    <form action="join.jsp" method="post">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+       <!-- <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </div> --> 
+        <div class="form-group">
+            <label for="workshop">Select Workshop:</label>
+            <select id="workshop" name="workshop" required>
+                <option value="">--Please choose an option--</option>
+                <option value="Eco Friendly Products: Innovations and Impact">Sustainable Fashion Repairing and Redesigning Old Clothes</option>
+                <option value="Transforming Waste into Functional Art">Transforming Waste into Functional Art</option>
+                <option value="Repairing and Redesigning Old Clothes">Webinar Eco-Friendly Products Innovations and Impact</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Register">
+        </div>
+    </form>
+    
+</div>
+    
+</body>
+</html>
+
+           

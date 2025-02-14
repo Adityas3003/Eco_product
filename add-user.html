@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <style>
+           /* CSS for Admin Panel */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.admin-panel {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+   
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 2px;
+     margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: black;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    font-size: 1.2em;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: grey;
+    color: white;
+}
+form input[type="text"]::placeholder {
+    color: white;
+}
+form input[type="email"]::placeholder {
+    color: white;
+}
+form input[type="password"]::placeholder {
+    color: white;
+}
+
+button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .admin-panel {
+        margin: 20px;
+        padding: 10px;
+    }
+    
+    form {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
+               
+    </style>
+</head>
+<body>
+    <div class="admin-panel">
+        <header>
+            <h1>ADMIN PANEL</h1>
+            <nav>
+                <ul>
+                    <li><a href="admin.html">HOME</a></li>
+                    <li><a href="viewuser.jsp">VIEW USERS</a></li>
+                    <li><a href="view-workshop-registration.jsp">VIEW WORKSHOPS</a></li>
+                     <li><a href="feedback.jsp">FEEDBACK</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>ADD USER</h2>
+            <form id="userForm" action="adduser.jsp" method="post">
+                <label for="userName">Name:</label>
+                <input type="text" id="userName" name="username" placeholder="NAME.." required><br><br>
+
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" name="email" placeholder="EMAIL.." required><br><br>
+<label for="password">Password :</label>
+                 <input type="password" id="password" name="password" placeholder="Password" required/><br><br>
+                 <label for="confirm-password">Confirm-password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required/><br><br>
+
+                <button type="submit">ADD USER</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

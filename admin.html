@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+         body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Light blue gradient */
+        }
+
+        .admin-panel {
+            display: flex;
+            height: 100vh;
+        }
+
+        header {
+            background: #303030; /* Deep blue header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+
+        .sidebar {
+            background: #303030; /* Dark blue sidebar */
+            color: black;
+            width: 250px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-right: 2px solid #00509e;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            letter-spacing: 2px;
+            color:white;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: black; /* Gold color for links */
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+             background: #ffd700;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+        .sidebar ul li a:hover {
+            background: green; /* Light hover effect */
+            transform: translateX(5px);
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background: whitesmoke; /* White main content area */
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: margin-left 0.3s;
+        }
+
+        main h2 {
+            color: #003366; /* Dark blue heading */
+            font-size: 30px;
+            border-bottom: 2px solid #ffd700; /* Gold underline */
+            padding-bottom: 10px;
+        }
+
+        main p {
+            color: #555; /* Medium gray text */
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .card {
+            background: #f9f9f9; /* Light gray cards */
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ADMIN PANEL</h1>
+    </header>
+
+    <div class="admin-panel">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                    <li><a href="viewuser.jsp"><i class="fas fa-users"></i>View User</a></li>
+                    <li><a href="view-workshop-registration.jsp"><i class="fas fa-calendar-alt"></i>View Workshop Registration</a></li>
+                    <li><a href="add-user.html"><i class="fas fa-user-plus"></i>Add User</a></li>
+                    <li><a href="feedback.jsp"><i class="fas fa-comments"></i>Feedback</a>
+                    <li><a href="adminlog.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <h2>Dashboard</h2>
+            <p>Welcome to your admin dashboard. Here you can manage your application efficiently.</p>
+            <p><p>Use the navigation menu to manage users, workshops, and other tasks.</p></p>
+        </main>
+    </div>
+
+    <script >
+    function logout(){
+        alert("Logout Successfully")
+    	
+    }
+    </script>
+</body>
+</html>
